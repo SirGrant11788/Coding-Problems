@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Text;
 
 namespace Coding_Problems
@@ -13,7 +14,7 @@ namespace Coding_Problems
             string bitVal = "11110000111100001111000011110000";
             char[] charArray = bitVal.ToCharArray();
             Array.Reverse(charArray);
-            Console.Write("Given: "+ bitVal +"\nReversed: ");
+            Console.Write("Given: " + bitVal + "\nReversed: ");
             Console.Write(charArray);
             Console.ReadKey();
         }
