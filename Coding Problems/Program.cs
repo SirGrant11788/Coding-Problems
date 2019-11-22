@@ -12,7 +12,7 @@ namespace Coding_Problems
 
         static void Main(string[] args)
         {
-            Recurring.RunRecurring();
+            LinkedListSwap.Swap();
         }
     }
 }
