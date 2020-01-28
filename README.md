@@ -31,3 +31,5 @@ StackVsQueue - Working example of stack and queue methods.
 
 Rearrange - Given a string with repeated characters, rearrange the string so that no two adjacent characters are the same.If this is not possible, return None. For example, given "aaabbc", you could return "ababac". Given "aaab", return None.
 
+MapPrefix - Implement a PrefixMapSum class with the following methods: insert(key: str, value: int) : Set a given key's value in the map. If the key already exists, sum the value.
+
