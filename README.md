@@ -33,3 +33,10 @@ Rearrange - Given a string with repeated characters, rearrange the string so tha
 
 MapPrefix - Implement a PrefixMapSum class with the following methods: insert(key: str, value: int) : Set a given key's value in the map. If the key already exists, sum the value.
 
+LinkedList - Given a linked list, remove all consecutive nodes that sum to zero.Print out the remaining nodes.For example, suppose you are given the input 3 -> 4 -> -7 -> 5 -> -6 -> 6. In this case, you should first remove 3 -> 4 -> -7, then -6 -> 6, leaving only 5.
+
+TimeAngle - Given a clock time in hh:mm format, determine, to the nearest degree, the angle between the hour and the minute hands.
+
+Knight - A knight is placed on a given square on an 8 x 8 chessboard.It is then moved randomly several times, where each move is a standard knight move.If the knight jumps off the board at any point, however, it is not allowed to jump back on. After k moves, what is the probability that the knight remains on the board?
+
+
