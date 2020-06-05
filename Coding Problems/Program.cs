@@ -12,7 +12,11 @@ namespace Coding_Problems
 
         static void Main(string[] args)
         {
-            MapPrefix.PrefixSum();
+            //MapPrefix.PrefixSum();
+            //Knight.Play();
+            FizzBuzz fizzbuzz = new FizzBuzz();
+            fizzbuzz.Play();
+            //FizzBuzz.Play();
         }
     }
 }
