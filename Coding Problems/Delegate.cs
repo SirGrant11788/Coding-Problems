@@ -29,7 +29,7 @@ namespace Coding_Problems
             Console.WriteLine("Times");
             Console.WriteLine(a * b);
         }
-        static void Delegates()
+        public static void Delegates()
         {
             Program p = new Program();
 

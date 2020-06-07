@@ -22,7 +22,7 @@ namespace Coding_Problems
             Console.WriteLine();
             Console.ReadKey();
         }
-        private static void MonteCarloPiApproximationSerialSimulation()
+        public static void MonteCarloPiApproximationSerialSimulation()
         {
             double piApproximation = 0;
             int total = 0;

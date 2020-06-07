@@ -11,7 +11,7 @@ namespace Coding_Problems
 
     class ArrayInsertionSort
     {
-        static void InsetionSort() 
+        public static void InsetionSort() 
         {
             //insert data in array
             int[] arr = new int[9] { -11, 12, -42, 0, 1, 90, 68, 6, -9 };

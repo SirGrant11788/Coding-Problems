@@ -7,7 +7,7 @@ namespace Coding_Problems
     class EncodedMessage
     {
         //Given the mapping a=1, b=2..z= 26 and an encoded message, count the number of ways it can decoded.
-        static void EncodedMessages()
+        public static void EncodedMessages()
         {
             int decoded = 0;
             string decrypted = null;

@@ -6,7 +6,7 @@ namespace Coding_Problems
 {
     class _2dArray
     {
-        static void TwoDArray()
+        public static void TwoDArray()
         {
             //10 times table
             int[,] arr = new int[11, 11];//declaration of 2D array 
