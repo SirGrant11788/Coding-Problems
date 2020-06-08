@@ -21,32 +21,63 @@ namespace Coding_Problems
             //chromeDriver.Keyboard.SendKeys("Test");
             //chromeDriver.Keyboard.SendKeys(Keys.Enter);
             //*[@id=\"search\"]input[1]
+            //
 
-            IWebDriver driver = new ChromeDriver();
-            driver.Url = "https://za.indeed.com/";
+            //IWebDriver driver = new ChromeDriver();
+            //driver.Url = "https://za.indeed.com/";
 
-            IWebElement elementWhat = driver.FindElement(By.Id("text-input-what"));
-            elementWhat.SendKeys("junior software");
-            IWebElement elementWhere = driver.FindElement(By.Id("text-input-where"));
-            elementWhere.SendKeys("Johannesburg, Gauteng");
-            elementWhere.SendKeys(Keys.Enter);
+            //IWebElement elementWhat = driver.FindElement(By.Id("text-input-what"));
+            //elementWhat.SendKeys("junior software");
+            //IWebElement elementWhere = driver.FindElement(By.Id("text-input-where"));
+            //elementWhere.SendKeys("Johannesburg, Gauteng");
+            //elementWhere.SendKeys(Keys.Enter);
 
-            Indeed(driver);
+            //Indeed(driver);
 
-            driver.Close();
+            //driver.Close();
 
-            IWebDriver driverTwo = new ChromeDriver();
-            driverTwo.Url = "https://za.indeed.com/";
+            //IWebDriver driverTwo = new ChromeDriver();
+            //driverTwo.Url = "https://za.indeed.com/";
 
-            IWebElement elementWhatTwo = driverTwo.FindElement(By.Id("text-input-what"));
-            elementWhatTwo.SendKeys("junior developer");
-            IWebElement elementWhereTwo = driverTwo.FindElement(By.Id("text-input-where"));
-            elementWhereTwo.SendKeys("Johannesburg, Gauteng");
-            elementWhereTwo.SendKeys(Keys.Enter);
+            //IWebElement elementWhatTwo = driverTwo.FindElement(By.Id("text-input-what"));
+            //elementWhatTwo.SendKeys("junior developer");
+            //IWebElement elementWhereTwo = driverTwo.FindElement(By.Id("text-input-where"));
+            //elementWhereTwo.SendKeys("Johannesburg, Gauteng");
+            //elementWhereTwo.SendKeys(Keys.Enter);
 
-            Indeed(driverTwo);
+            //Indeed(driverTwo);
 
-            driverTwo.Close();
+            //driverTwo.Close();
+
+            IWebDriver driverThree = new ChromeDriver();
+            //js dropdown issue
+            driverThree.Url = "https://www.careerjunction.co.za/jobs/results?jobtitle=&companies=&job_ref=&keywords=junior+developer&location%5B%5D=2747";
+
+            //IWebElement elementWhereThree = 
+            //driverThree.FindElement(By.Id("2747")).Click();
+            ///driverThree.FindElement(By.XPath("//*[@id=\"mCSB_3_container\"]/ul/li[2]/div/span/label/input")).Click();
+            //elementWhereThree.SendKeys("junior developer");
+           // IWebElement elementWhatThree = driverThree.FindElement(By.Id("form1_anykeywords_input"));
+            //elementWhatThree.SendKeys("Junior developer");
+            //elementWhatThree.SendKeys(Keys.Enter);
+            //driverThree.FindElement(By.Id("form1_submit")).Click();
+
+            Careerjunction(driverThree);
+
+           // driverThree.Close();
+        }
+
+        public static void Careerjunction(IWebDriver driver)
+        {
+            var titles = driver.FindElements(By.ClassName("cardContentJob"));
+            //var titles = driver.FindElements(By.XPath("/html/body/div[2]/div[2]/div[1]/div[2]/div[2]/div[5]/section/div/div/div/div[2]/div[2]/div/div/div[2]/div/div/div/div"));
+
+            foreach (var item in titles)
+            {
+                
+                Console.WriteLine("\n\n"+item.Text);
+                Console.WriteLine(item.GetAttribute("href"));
+            }
         }
 
         public static void Indeed(IWebDriver driver)
@@ -58,7 +89,7 @@ namespace Coding_Problems
 
             for (int i = 0; i < titles.Count; i++)
             {
-                if (!daysAgo[i].Text.Contains("30"))
+                if (!daysAgo[i].Text.Contains("30") && titles[i].Text.ToLower().Contains("junior"))
                 {
                     Console.WriteLine("\n\n" + titles[i].Text + "\n" + summary[i].Text + "\n" + daysAgo[i].Text);
 
