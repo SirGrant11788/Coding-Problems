@@ -33,7 +33,7 @@ namespace Coding_Problems
                 "18 Root Binary Tree\n" +
                 "19 Stack vs Queue\n" +
                 "20 Time Angle\n" +
-                "21 Future Project\n" +
+                "21 Web Scraping\n" +
                 "22 Future Project\n" +
                 "23 Future Project\n" +
                 "25 Future Project\n" +
@@ -104,7 +104,7 @@ namespace Coding_Problems
                     TimeAngle.Time();
                     break;
                 case 21:
-
+                    WebScraping.Scrape();
                     break;
                 case 22:
 
