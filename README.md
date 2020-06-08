@@ -41,4 +41,6 @@ Knight - A knight is placed on a given square on an 8 x 8 chessboard.It is then 
 
 FizzBuzz - The classic game Fizzbuzz. Play against the PC or let the PC run through the game FizzBuzz.
 
+WebScraping - Scraping job websites.
+
 
