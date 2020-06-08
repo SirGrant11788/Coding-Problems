@@ -58,39 +58,45 @@ namespace Coding_Problems
 
             for (int i = 0; i < titles.Count; i++)
             {
-                Console.WriteLine("\n\n" + titles[i].Text + "\n" + summary[i].Text + "\n" + daysAgo[i].Text);
-
-                for (int j = 0; j < link.Count; j++)
+                if (!daysAgo[i].Text.Contains("30"))
                 {
-                    if (link[j].Text == titles[i].Text)
+                    Console.WriteLine("\n\n" + titles[i].Text + "\n" + summary[i].Text + "\n" + daysAgo[i].Text);
+
+                    for (int j = 0; j < link.Count; j++)
                     {
-                        Console.WriteLine(link[j].GetAttribute("href"));
+                        if (link[j].Text == titles[i].Text)
+                        {
+                            Console.WriteLine(link[j].GetAttribute("href"));
+                        }
                     }
                 }
             }
-
+            
             try
             {
-                driver.FindElement(By.XPath("//*[@id=\"resultsCol\"]/nav/div/ul/li[6]/a")).Click();
+                driver.FindElement(By.XPath("//*[@id=\"resultsCol\"]/nav/div/ul/li[7]/a")).Click();
                 Console.WriteLine("CLICK!");
                 Indeed(driver);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("\nEND");
+                Console.WriteLine("\nEND!");
                 //Console.WriteLine(ex + "\n");
-            }
-            try
+                try
             {
-                driver.FindElement(By.XPath("//*[@id=\"resultsCol\"]/nav/div/ul/li[7]/a")).Click();
+                
+                driver.FindElement(By.XPath("//*[@id=\"resultsCol\"]/nav/div/ul/li[6]/a")).Click();
                 Console.WriteLine("\nCLICK!!");
                 Indeed(driver);
             }
             catch (Exception e)
             {
-                Console.WriteLine("\nEND");
+                Console.WriteLine("\nEND!!");
                 //Console.WriteLine(e);
             }
+            }
+            
+            
         }
     }
 }
