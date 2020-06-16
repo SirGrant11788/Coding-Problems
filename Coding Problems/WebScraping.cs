@@ -61,80 +61,80 @@ namespace Coding_Problems
             options.AddArguments("test-type");
 
 
-            ////start Indeed 1
-            //IWebDriver driverIndeed = new ChromeDriver(options);
-            //driverIndeed.Url = "https://za.indeed.com/";
-            //IWebElement elementWhatIndeed = driverIndeed.FindElement(By.Id("text-input-what"));
-            //elementWhatIndeed.SendKeys(jobTitleTwo);
-            //IWebElement elementWhereIndeed = driverIndeed.FindElement(By.Id("text-input-where"));
-            //elementWhereIndeed.SendKeys(location);
-            //elementWhereIndeed.SendKeys(Keys.Enter);
-            //Indeed(driverIndeed, sw, extraKeyword);
-            //driverIndeed.Close();
+            //start Indeed 1
+            IWebDriver driverIndeed = new ChromeDriver(options);
+            driverIndeed.Url = "https://za.indeed.com/";
+            IWebElement elementWhatIndeed = driverIndeed.FindElement(By.Id("text-input-what"));
+            elementWhatIndeed.SendKeys(jobTitleTwo);
+            IWebElement elementWhereIndeed = driverIndeed.FindElement(By.Id("text-input-where"));
+            elementWhereIndeed.SendKeys(location);
+            elementWhereIndeed.SendKeys(Keys.Enter);
+            Indeed(driverIndeed, sw, extraKeyword);
+            driverIndeed.Close();
 
-            ////start Indeed 2
-            //IWebDriver driverIndeed2 = new ChromeDriver(options);
-            //driverIndeed2.Url = "https://za.indeed.com/";
-            //IWebElement elementWhatIndeed2 = driverIndeed2.FindElement(By.Id("text-input-what"));
-            //elementWhatIndeed2.SendKeys(jobTitleOne);
-            //IWebElement elementWhereIndeed2 = driverIndeed2.FindElement(By.Id("text-input-where"));
-            //elementWhereIndeed2.SendKeys(location);
-            //elementWhereIndeed2.SendKeys(Keys.Enter);
-            //Indeed(driverIndeed2, sw, extraKeyword);
-            //driverIndeed2.Close();
+            //start Indeed 2
+            IWebDriver driverIndeed2 = new ChromeDriver(options);
+            driverIndeed2.Url = "https://za.indeed.com/";
+            IWebElement elementWhatIndeed2 = driverIndeed2.FindElement(By.Id("text-input-what"));
+            elementWhatIndeed2.SendKeys(jobTitleOne);
+            IWebElement elementWhereIndeed2 = driverIndeed2.FindElement(By.Id("text-input-where"));
+            elementWhereIndeed2.SendKeys(location);
+            elementWhereIndeed2.SendKeys(Keys.Enter);
+            Indeed(driverIndeed2, sw, extraKeyword);
+            driverIndeed2.Close();
 
-            ////start Careerjunction
-            //IWebDriver driverCareerjunction = new ChromeDriver(options);
-            ////js dropdown issue
-            ////driverCareerjunction.Url = "https://www.careerjunction.co.za/jobs/results?jobtitle=&companies=&job_ref=&keywords=junior+developer&location%5B%5D=2747";
+            //start Careerjunction
+            IWebDriver driverCareerjunction = new ChromeDriver(options);
+            //js dropdown issue
+            //driverCareerjunction.Url = "https://www.careerjunction.co.za/jobs/results?jobtitle=&companies=&job_ref=&keywords=junior+developer&location%5B%5D=2747";
 
-            //driverCareerjunction.Url = "https://www.careerjunction.co.za";
+            driverCareerjunction.Url = "https://www.careerjunction.co.za";
 
-            ////js dropdown issue
-            ////driverCareerjunction.FindElement(By.XPath("//*[@id=\"location\"]/option")).Click();
-            //IWebElement elementWheredriverCareerjunction = driverCareerjunction.FindElement(By.Id("location"));
-            ////elementWheredriverCareerjunction.Click();
-            //SelectElement oSelect = new SelectElement(elementWheredriverCareerjunction);
-            //IList<IWebElement> elementCount = oSelect.Options;
-            //Console.Write(elementCount.Count);
-            //int iSize = elementCount.Count;
-            //for (int i = 0; i > iSize; i++)
-            //{
-            //    String sValue = elementCount.ElementAt(i).Text;
-            //    Console.WriteLine(sValue);
-            //}
+            //js dropdown issue
+            //driverCareerjunction.FindElement(By.XPath("//*[@id=\"location\"]/option")).Click();
+            IWebElement elementWheredriverCareerjunction = driverCareerjunction.FindElement(By.Id("location"));
+            //elementWheredriverCareerjunction.Click();
+            SelectElement oSelect = new SelectElement(elementWheredriverCareerjunction);
+            IList<IWebElement> elementCount = oSelect.Options;
+            Console.Write(elementCount.Count);
+            int iSize = elementCount.Count;
+            for (int i = 0; i > iSize; i++)
+            {
+                String sValue = elementCount.ElementAt(i).Text;
+                Console.WriteLine(sValue);
+            }
 
 
-            //IWebElement elementWhatdriverCareerjunction = driverCareerjunction.FindElement(By.XPath("//*[@id=\"form1_anykeywords_input\"]"));
-            //elementWhatdriverCareerjunction.SendKeys(jobTitleOne);
-            //elementWhatdriverCareerjunction.SendKeys(Keys.Enter);
-            //driverCareerjunction.FindElement(By.Id("form1_submit")).Click();
+            IWebElement elementWhatdriverCareerjunction = driverCareerjunction.FindElement(By.XPath("//*[@id=\"form1_anykeywords_input\"]"));
+            elementWhatdriverCareerjunction.SendKeys(jobTitleOne);
+            elementWhatdriverCareerjunction.SendKeys(Keys.Enter);
+            driverCareerjunction.FindElement(By.Id("form1_submit")).Click();
 
-            //Careerjunction(driverCareerjunction, sw);
-            //driverCareerjunction.Close();
+            Careerjunction(driverCareerjunction, sw);
+            driverCareerjunction.Close();
 
-            ////start Pnet
-            //IWebDriver driverFour = new ChromeDriver(options);
-            //driverFour.Url = "https://www.pnet.co.za/";
-            //IWebElement elementWhatPnet = driverFour.FindElement(By.XPath("//*[@id=\"collapseSearch\"]/div/div/div/div/form/div[1]/div[1]/div/span[2]/input[2]"));
-            //elementWhatPnet.SendKeys(jobTitleOne);
-            //IWebElement elementWherePnet = driverFour.FindElement(By.XPath("//*[@id=\"collapseSearch\"]/div/div/div/div/form/div[1]/div[2]/div/div/span[2]/input[2]"));
-            //elementWherePnet.SendKeys(location);
-            //elementWhatPnet.SendKeys(Keys.Enter);
-            //int pageCount = 0;
-            //Pnet(driverFour, pageCount, sw, extraKeyword);
-            //driverFour.Close();
+            //start Pnet
+            IWebDriver driverPnet = new ChromeDriver(options);
+            driverPnet.Url = "https://www.pnet.co.za/";
+            IWebElement elementWhatPnet = driverPnet.FindElement(By.XPath("//*[@id=\"collapseSearch\"]/div/div/div/div/form/div[1]/div[1]/div/span[2]/input[2]"));
+            elementWhatPnet.SendKeys(jobTitleOne);
+            IWebElement elementWherePnet = driverPnet.FindElement(By.XPath("//*[@id=\"collapseSearch\"]/div/div/div/div/form/div[1]/div[2]/div/div/span[2]/input[2]"));
+            elementWherePnet.SendKeys(location);
+            elementWhatPnet.SendKeys(Keys.Enter);
+            int pageCount = 0;
+            Pnet(driverPnet, pageCount, sw, extraKeyword);
+            driverPnet.Close();
 
-            ////start CareerJet
-            //IWebDriver driverFive = new ChromeDriver(options);
-            //driverFive.Url = "https://www.careerjet.co.za/";
-            //IWebElement elementWhatCareerjet = driverFive.FindElement(By.Id("s"));
-            //elementWhatCareerjet.SendKeys(jobTitleOne);
-            //IWebElement elementWhereCareerjet = driverFive.FindElement(By.Id("l"));
-            //elementWhereCareerjet.SendKeys(location);
-            //elementWhereCareerjet.SendKeys(Keys.Enter);
-            //Careerjet(driverFive, sw, extraKeyword);
-            //driverFive.Close();
+            //start CareerJet
+            IWebDriver driverCareerJet = new ChromeDriver(options);
+            driverCareerJet.Url = "https://www.careerjet.co.za/";
+            IWebElement elementWhatCareerjet = driverCareerJet.FindElement(By.Id("s"));
+            elementWhatCareerjet.SendKeys(jobTitleOne);
+            IWebElement elementWhereCareerjet = driverCareerJet.FindElement(By.Id("l"));
+            elementWhereCareerjet.SendKeys(location);
+            elementWhereCareerjet.SendKeys(Keys.Enter);
+            Careerjet(driverCareerJet, sw, extraKeyword);
+            driverCareerJet.Close();
 
             //start Careers24
             IWebDriver driverCareers24 = new ChromeDriver(options);
