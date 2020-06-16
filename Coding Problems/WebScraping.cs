@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using OpenQA.Selenium;
@@ -82,28 +83,34 @@ namespace Coding_Problems
             //Indeed(driverIndeed2, sw, extraKeyword);
             //driverIndeed2.Close();
 
-            //start Careerjunction
-            IWebDriver driverCareerjunction = new ChromeDriver(options);
-            //js dropdown issue
-            //driverCareerjunction.Url = "https://www.careerjunction.co.za/jobs/results?jobtitle=&companies=&job_ref=&keywords=junior+developer&location%5B%5D=2747";
+            ////start Careerjunction
+            //IWebDriver driverCareerjunction = new ChromeDriver(options);
+            ////js dropdown issue
+            ////driverCareerjunction.Url = "https://www.careerjunction.co.za/jobs/results?jobtitle=&companies=&job_ref=&keywords=junior+developer&location%5B%5D=2747";
 
-            driverCareerjunction.Url = "https://www.careerjunction.co.za";
+            //driverCareerjunction.Url = "https://www.careerjunction.co.za";
 
-
-            //driverCareerjunction.FindElement(By.XPath("//*[@id=\"mCSB_3_container\"]/ul/li[2]")).Click();
-            //IWebElement elementWheredriverCareerjunction = driverCareerjunction.FindElement(By.XPath("//*[@id=\"mCSB_3_container\"]/ul/li[2]"));
-            //elementWheredriverCareerjunction.Click();
+            ////js dropdown issue
+            ////driverCareerjunction.FindElement(By.XPath("//*[@id=\"location\"]/option")).Click();
+            //IWebElement elementWheredriverCareerjunction = driverCareerjunction.FindElement(By.Id("location"));
+            ////elementWheredriverCareerjunction.Click();
             //SelectElement oSelect = new SelectElement(elementWheredriverCareerjunction);
             //IList<IWebElement> elementCount = oSelect.Options;
             //Console.Write(elementCount.Count);
+            //int iSize = elementCount.Count;
+            //for (int i = 0; i > iSize; i++)
+            //{
+            //    String sValue = elementCount.ElementAt(i).Text;
+            //    Console.WriteLine(sValue);
+            //}
 
 
-            IWebElement elementWhatdriverCareerjunction = driverCareerjunction.FindElement(By.XPath("//*[@id=\"form1_anykeywords_input\"]"));
-            elementWhatdriverCareerjunction.SendKeys(jobTitleOne);
-            elementWhatdriverCareerjunction.SendKeys(Keys.Enter);
-            driverCareerjunction.FindElement(By.Id("form1_submit")).Click();
+            //IWebElement elementWhatdriverCareerjunction = driverCareerjunction.FindElement(By.XPath("//*[@id=\"form1_anykeywords_input\"]"));
+            //elementWhatdriverCareerjunction.SendKeys(jobTitleOne);
+            //elementWhatdriverCareerjunction.SendKeys(Keys.Enter);
+            //driverCareerjunction.FindElement(By.Id("form1_submit")).Click();
 
-            Careerjunction(driverCareerjunction, sw);
+            //Careerjunction(driverCareerjunction, sw);
             //driverCareerjunction.Close();
 
             ////start Pnet
@@ -129,35 +136,42 @@ namespace Coding_Problems
             //Careerjet(driverFive, sw, extraKeyword);
             //driverFive.Close();
 
-            ////start Careers24
-            //IWebDriver driverSix = new ChromeDriver(options);
+            //start Careers24
+            IWebDriver driverCareers24 = new ChromeDriver(options);
 
-            ////driverSix.Url = "https://www.careers24.com/";
-            ////IWebElement elementWhatCareers24 = driverSix.FindElement(By.Id("inSearch"));
-            ////elementWhatCareers24.SendKeys("junior developer");
-            ////todo menu select
+            driverCareers24.Url = "https://www.careers24.com/";
+            IWebElement elementWhatCareers24 = driverCareers24.FindElement(By.Id("inSearch"));
+            elementWhatCareers24.SendKeys(jobTitleOne);
+            //todo menu select
+            //driverCareers24.FindElement(By.XPath("//*[@id=\"rootItem\"]")).Click();
+            //driverCareers24.FindElement(By.XPath("//*[@id=\"ctl00_ctl00_contentHeaderPlaceHolder_c24basicjobsearch1_inLocation_locationContent\"]")).Click();
+            ////driverCareers24.FindElement(By.XPath("//*[@id=\"ctl00_ctl00_contentHeaderPlaceHolder_c24basicjobsearch1_inLocation_locationSelect_mn_active\"]/span")).Click();
+
+            //IWebElement elementWheredriverCareers24 = driverCareers24.FindElement(By.XPath("//*[@id=\"rootItem\"]"));
+            //elementWheredriverCareers24.Click();
+            //SelectElement oSelect = new SelectElement(elementWheredriverCareers24);
+            //IList<IWebElement> elementCount = oSelect.Options;
+            //Console.Write(elementCount.Count);
+            //int iSize = elementCount.Count;
+            //for (int i = 0; i > iSize; i++)
+            //{
+            //    String sValue = elementCount.ElementAt(i).Text;
+            //    Console.WriteLine(sValue);
+            //}
+
+            //driverCareers24.Url = "https://www.careers24.com/jobs/lc-johannesburg/kw-junior-developer/m-true/";
 
 
-            //driverSix.Url = "https://www.careers24.com/jobs/lc-johannesburg/kw-junior-developer/m-true/";
+            driverCareers24.FindElement(By.XPath("//*[@id=\"ctl00_ctl00_contentHeaderPlaceHolder_c24basicjobsearch1_btnSearch\"]")).Click();
+            Careers24(driverCareers24, sw);
+            driverCareers24.Close();
 
+            //end bit
+            sw.Close();
+            Process.Start("notepad.exe", file);//todo notepad++
 
-            //Careers24(driverSix, sw);
-            //driverSix.Close();
+            //Console.Close();
 
-            ////end bit
-            //sw.Close();
-            //Process.Start("notepad.exe", file);//todo notepad++
-
-            //this.Close();
-
-            //driverSix.FindElement(By.XPath("//*[contains(@name, 'Johannesburg')]")).Click();
-            //IWebElement elementWhatCareers24 = driverSix.FindElement(By.Id("inSearch"));
-            //elementWhatCareers24.SendKeys("junior developer");
-            //elementWhatCareers24.SendKeys(Keys.Enter);
-            //////IWebElement elementWhere = driverFive.FindElement(By.Name("industries"));
-            ////driverFive.FindElement(By.XPath("/html/body/div[5]/div[1]/div[1]/form/div[2]/select/option[10]")).Click();
-            ////driverFive.FindElement(By.XPath("//*[@id=\"city\"]/option[4]")).Click();
-            ////driverFive.FindElement(By.XPath("/html/body/div[5]/div[1]/div[1]/form/button")).Click();
         }
 
         public static void Careers24(IWebDriver driver, StreamWriter sw)
@@ -209,6 +223,8 @@ namespace Coding_Problems
                 }
 
             }
+
+            
 
             
         }
@@ -268,7 +284,7 @@ namespace Coding_Problems
         public static void Careerjunction(IWebDriver driver, StreamWriter sw)
         {
             Thread.Sleep(3500);
-            Console.WriteLine("HOWZIT");
+            
             var titles = driver.FindElements(By.XPath("//*[contains(@class, 'noUnderline jobTitle')]"));
 
             foreach (var item in titles)
@@ -276,6 +292,18 @@ namespace Coding_Problems
                 Console.WriteLine("\n\n"+item.Text);
                 Console.WriteLine(item.GetAttribute("href"));
                 sw.WriteLine("\n\n" + item.Text+"\n"+ item.GetAttribute("href"));
+            }
+
+            try
+            {
+                
+                driver.FindElement(By.ClassName("paginationNext")).Click();
+                
+                Careerjunction(driver, sw);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("No Next Page!");
             }
         }
 
